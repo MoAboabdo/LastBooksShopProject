@@ -1,6 +1,6 @@
 {
     "env": {
-        "MONGO_USER":"mego",
+        "MONGO_USER":"moaboabdo",
         "MONGO_PASSWORD":"tot3n5amon",
         "MONGO_DEFAULT_DATABASE":"shop",
         "STRIP_KEY":"sk_test_ote0lWfCo7IQOwTgSWrqPZNo00xSNdZ6OM"

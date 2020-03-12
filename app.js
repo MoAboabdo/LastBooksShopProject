@@ -19,9 +19,9 @@ const shopController = require('./controllers/shop');
 const isAuth = require('./middleware/is-auth');
 const User = require('./models/user');
 
-const MONGODB_URI =`mongodb+srv://${process.env.MONGO_USER}:${
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
   process.env.MONGO_PASSWORD
-}@cluster0-ntrwp.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+}@cluster0-8pciz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`;
 
 const app = express();
 const store = new MongoDBStore({
@@ -29,8 +29,9 @@ const store = new MongoDBStore({
   collection: 'sessions'
 });
 const csrfProtection = csrf();
-//const privateKey = fs.readFileSync('server.key');
-//const certificate = fs.readFileSync('server.cert');
+
+// const privateKey = fs.readFileSync('server.key');
+// const certificate = fs.readFileSync('server.cert');
 
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -136,11 +137,11 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(MONGODB_URI,{ useNewUrlParser: true,useUnifiedTopology: true })
+  .connect(MONGODB_URI,{useUnifiedTopology: true,useNewUrlParser: true})
   .then(result => {
-    //https
-      //.createServer({key:privateKey,cert:certificate},app)
-      //.listen(process.env.PORT || 3000);
+    // https
+    //   .createServer({ key: privateKey, cert: certificate }, app)
+    //   .listen(process.env.PORT || 3000);
       app.listen(process.env.PORT || 3000);
   })
   .catch(err => {
