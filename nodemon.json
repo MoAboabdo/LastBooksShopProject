@@ -1,8 +1,8 @@
 {
     "env": {
-        "MONGO_USER":"Type MongoDB Name Here",
-        "MONGO_PASSWORD":"TYPE MONGODB PASSWORD HERE",
-        "MONGO_DEFAULT_DATABASE":"TYPE NAME OF YOUR DB ANY NAME YOU WANT",
-        "STRIP_KEY":"TYPE STRIP KEY HERE"
+        "MONGO_USER":"moaboabdo",
+        "MONGO_PASSWORD":"tot3n5amon",
+        "MONGO_DEFAULT_DATABASE":"shop",
+        "STRIP_KEY":"sk_test_ote0lWfCo7IQOwTgSWrqPZNo00xSNdZ6OM"
     }
 }
